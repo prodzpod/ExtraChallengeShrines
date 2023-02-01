@@ -1,6 +1,6 @@
 {
   "name": "ExtraChallengeShrines",
-  "version_number": "1.0.0",
+  "version_number": "1.0.1",
   "website_url": "",
   "description": "Adds new Shrine of the Mountain-like shrines that affect boss fights and their rewards",
   "dependencies": [
