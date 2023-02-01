@@ -1,0 +1,11 @@
+{
+  "name": "ExtraChallengeShrines",
+  "version_number": "1.0.0",
+  "website_url": "",
+  "description": "Adds new Shrine of the Mountain-like shrines that affect boss fights and their rewards",
+  "dependencies": [
+    "bbepis-BepInExPack-5.4.1905",
+    "RiskofThunder-HookGenPatcher-1.2.3",
+    "TheMysticSword-MysticsRisky2Utils-2.0.8"
+  ]
+}

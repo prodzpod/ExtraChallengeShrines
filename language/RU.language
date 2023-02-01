@@ -1,0 +1,22 @@
+{
+  "RU": {
+    "EXTRACHALLENGESHRINES_SHRINE_CROWN_NAME": "Святилище Неба",
+    "EXTRACHALLENGESHRINES_SHRINE_CROWN_CONTEXT": "Помолиться Святилищу Неба",
+    "EXTRACHALLENGESHRINES_SHRINE_CROWN_USE_MESSAGE_2P": "<style=cShrine>Вы начали испытание Неба..</color>",
+    "EXTRACHALLENGESHRINES_SHRINE_CROWN_USE_MESSAGE": "<style=cShrine>{0} начинает испытание Неба..</color>",
+    "EXTRACHALLENGESHRINES_SHRINE_CROWN_BEGIN_TRIAL": "<style=cShrine>Да начнётся испытание Неба!</style>",
+
+    "EXTRACHALLENGESHRINES_SHRINE_ROCK_NAME": "Святилище Земли",
+    "EXTRACHALLENGESHRINES_SHRINE_ROCK_CONTEXT": "Помолиться Святилищу Земли",
+    "EXTRACHALLENGESHRINES_SHRINE_ROCK_USE_MESSAGE_2P": "<style=cShrine>Вы начали испытание Земли..</color>",
+    "EXTRACHALLENGESHRINES_SHRINE_ROCK_USE_MESSAGE": "<style=cShrine>{0} начинает испытание Земли..</color>",
+    "EXTRACHALLENGESHRINES_SHRINE_ROCK_BEGIN_TRIAL": "<style=cShrine>Да начнётся испытание Земли!</style>",
+
+    "EXTRACHALLENGESHRINES_SHRINE_EYE_NAME": "Святилище Ветра",
+    "EXTRACHALLENGESHRINES_SHRINE_EYE_CONTEXT": "Помолиться Святилищу Ветра",
+    "EXTRACHALLENGESHRINES_SHRINE_EYE_INTERACTION_HEADER": "Каково ваше видение?",
+    "EXTRACHALLENGESHRINES_SHRINE_EYE_USE_MESSAGE_2P": "<style=cShrine>Вы начали испытание Ветра..</color>",
+    "EXTRACHALLENGESHRINES_SHRINE_EYE_USE_MESSAGE": "<style=cShrine>{0} начинает испытание Ветра..</color>",
+    "EXTRACHALLENGESHRINES_SHRINE_EYE_BEGIN_TRIAL": "<style=cShrine>Да начнётся испытание Ветра!</style>"
+  }
+}

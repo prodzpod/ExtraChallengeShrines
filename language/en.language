@@ -1,0 +1,22 @@
+{
+  "strings": {
+    "EXTRACHALLENGESHRINES_SHRINE_CROWN_NAME": "Shrine of the Sky",
+    "EXTRACHALLENGESHRINES_SHRINE_CROWN_CONTEXT": "Pray to Shrine of the Sky",
+    "EXTRACHALLENGESHRINES_SHRINE_CROWN_USE_MESSAGE_2P": "<style=cShrine>You have invited the challenge of the Sky..</color>",
+    "EXTRACHALLENGESHRINES_SHRINE_CROWN_USE_MESSAGE": "<style=cShrine>{0} has invited the challenge of the Sky..</color>",
+    "EXTRACHALLENGESHRINES_SHRINE_CROWN_BEGIN_TRIAL": "<style=cShrine>Let the challenge of the Sky... begin!</style>",
+
+    "EXTRACHALLENGESHRINES_SHRINE_ROCK_NAME": "Shrine of the Earth",
+    "EXTRACHALLENGESHRINES_SHRINE_ROCK_CONTEXT": "Pray to Shrine of the Earth",
+    "EXTRACHALLENGESHRINES_SHRINE_ROCK_USE_MESSAGE_2P": "<style=cShrine>You have invited the challenge of the Earth..</color>",
+    "EXTRACHALLENGESHRINES_SHRINE_ROCK_USE_MESSAGE": "<style=cShrine>{0} has invited the challenge of the Earth..</color>",
+    "EXTRACHALLENGESHRINES_SHRINE_ROCK_BEGIN_TRIAL": "<style=cShrine>Let the challenge of the Earth... begin!</style>",
+
+    "EXTRACHALLENGESHRINES_SHRINE_EYE_NAME": "Shrine of the Wind",
+    "EXTRACHALLENGESHRINES_SHRINE_EYE_CONTEXT": "Pray to Shrine of the Wind",
+    "EXTRACHALLENGESHRINES_SHRINE_EYE_INTERACTION_HEADER": "What is your vision?",
+    "EXTRACHALLENGESHRINES_SHRINE_EYE_USE_MESSAGE_2P": "<style=cShrine>You have invited the challenge of the Wind..</color>",
+    "EXTRACHALLENGESHRINES_SHRINE_EYE_USE_MESSAGE": "<style=cShrine>{0} has invited the challenge of the Wind..</color>",
+    "EXTRACHALLENGESHRINES_SHRINE_EYE_BEGIN_TRIAL": "<style=cShrine>Let the challenge of the Wind... begin!</style>"
+  }
+}
