@@ -7,9 +7,3 @@ This mod adds 3 new Shrines that affect the Teleporter event fights and their re
 # Credits
 TheMysticSword - Coding  
 marwan60 - Modelling, Icons
-
-# Changelog
-## 1.0.1:
-* Made the shrines less common on Distant Roost, Titanic Plains and Siphoned Forest
-* Reduced Shrine of the Sky red drops from 2 to 1
-* Added an "Ignore Balance Config" option that is set to True by default. Turn it off if you want to customize the config values.
