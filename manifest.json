@@ -1,6 +1,6 @@
 {
   "name": "ExtraChallengeShrines",
-  "version_number": "1.0.1",
+  "version_number": "1.0.2",
   "website_url": "https://github.com/TheMysticSword/ExtraChallengeShrines",
   "description": "Adds new Shrine of the Mountain-like shrines that affect boss fights and their rewards",
   "dependencies": [
