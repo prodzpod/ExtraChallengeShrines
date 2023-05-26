@@ -130,6 +130,18 @@ namespace ExtraChallengeShrines.Interactables
                 1000,
                 onChanged: (x) => spawnCard.directorCreditCost = x
             );
+            ConfigOptions.ConfigurableValue.CreateInt(
+                ExtraChallengeShrinesPlugin.PluginGUID,
+                ExtraChallengeShrinesPlugin.PluginName,
+                ExtraChallengeShrinesPlugin.config,
+                "Shrine of the Sky",
+                "Max Spawns Per Stage",
+                -1,
+                -1,
+                1000,
+                description: "-1 means no limit",
+                onChanged: (x) => spawnCard.maxSpawnsPerStage = x
+            );
 
             var directorCardRare = new DirectorCard
             {
@@ -151,19 +163,73 @@ namespace ExtraChallengeShrines.Interactables
                 requiredUnlockableDef = null,
                 forbiddenUnlockableDef = null
             };
-            // base game
-            BaseInteractable.AddDirectorCardTo("blackbeach", "Shrines", directorCardRare);
-            BaseInteractable.AddDirectorCardTo("foggyswamp", "Shrines", directorCardRare);
-            BaseInteractable.AddDirectorCardTo("frozenwall", "Shrines", directorCardCommon);
-            BaseInteractable.AddDirectorCardTo("golemplains", "Shrines", directorCardRare);
-            BaseInteractable.AddDirectorCardTo("goolake", "Shrines", directorCardRare);
-            BaseInteractable.AddDirectorCardTo("shipgraveyard", "Shrines", directorCardCommon);
-            BaseInteractable.AddDirectorCardTo("skymeadow", "Shrines", directorCardCommon);
-            BaseInteractable.AddDirectorCardTo("wispgraveyard", "Shrines", directorCardRare);
-            // sotv
-            BaseInteractable.AddDirectorCardTo("ancientloft", "Shrines", directorCardRare);
-            BaseInteractable.AddDirectorCardTo("snowyforest", "Shrines", directorCardRare);
-            BaseInteractable.AddDirectorCardTo("sulfurpools", "Shrines", directorCardRare);
+
+            var stageNames = ConfigOptions.ConfigurableValue.CreateString(
+                ExtraChallengeShrinesPlugin.PluginGUID,
+                ExtraChallengeShrinesPlugin.PluginName,
+                ExtraChallengeShrinesPlugin.config,
+                "Shrine of the Sky",
+                "Stages",
+                "goolake,shipgraveyard",
+                restartRequired: true
+            );
+            foreach (var stageName in stageNames.Value.Split(','))
+                BaseInteractable.AddDirectorCardTo(stageName, "Shrines", directorCardCommon);
+
+            stageNames = ConfigOptions.ConfigurableValue.CreateString(
+                ExtraChallengeShrinesPlugin.PluginGUID,
+                ExtraChallengeShrinesPlugin.PluginName,
+                ExtraChallengeShrinesPlugin.config,
+                "Shrine of the Sky",
+                "Stages (Rare)",
+                "blackbeach,golemplains,skymeadow,wispgraveyard,ancientloft",
+                restartRequired: true
+            );
+            foreach (var stageName in stageNames.Value.Split(','))
+                BaseInteractable.AddDirectorCardTo(stageName, "Shrines", directorCardRare);
+
+            ConfigOptions.ConfigurableValue.CreateInt(
+                ExtraChallengeShrinesPlugin.PluginGUID,
+                ExtraChallengeShrinesPlugin.PluginName,
+                ExtraChallengeShrinesPlugin.config,
+                "Shrine of the Sky",
+                "Selection Weight",
+                10,
+                0,
+                1000,
+                onChanged: (x) => {
+                    directorCardCommon.selectionWeight = x;
+                }
+            );
+            ConfigOptions.ConfigurableValue.CreateInt(
+                ExtraChallengeShrinesPlugin.PluginGUID,
+                ExtraChallengeShrinesPlugin.PluginName,
+                ExtraChallengeShrinesPlugin.config,
+                "Shrine of the Sky",
+                "Selection Weight (Rare)",
+                1,
+                0,
+                1000,
+                onChanged: (x) => {
+                    directorCardRare.selectionWeight = x;
+                }
+            );
+
+            ConfigOptions.ConfigurableValue.CreateInt(
+                ExtraChallengeShrinesPlugin.PluginGUID,
+                ExtraChallengeShrinesPlugin.PluginName,
+                ExtraChallengeShrinesPlugin.config,
+                "Shrine of the Sky",
+                "Minimum Stage Completions",
+                0,
+                0,
+                99,
+                description: "Need to clear this many stages before it can spawn",
+                onChanged: (x) => {
+                    directorCardCommon.minimumStageCompletions = x;
+                    directorCardRare.minimumStageCompletions = x;
+                }
+            );
         }
     }
 
