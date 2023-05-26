@@ -18,6 +18,18 @@ namespace ExtraChallengeShrines.Interactables
         public static GameObject shrinePrefab;
         public static InteractableSpawnCard spawnCard;
 
+        public static ConfigOptions.ConfigurableValue<float> bossCredits = ConfigOptions.ConfigurableValue.CreateFloat(
+            ExtraChallengeShrinesPlugin.PluginGUID,
+            ExtraChallengeShrinesPlugin.PluginName,
+            ExtraChallengeShrinesPlugin.config,
+            "Shrine of the Earth",
+            "Boss Credits",
+            300f,
+            0f,
+            100000f,
+            "How many director credits to add when this shrine is first used?",
+            useDefaultValueConfigEntry: ExtraChallengeShrinesPlugin.ignoreBalanceChanges
+        );
         public static ConfigOptions.ConfigurableValue<float> bossCreditsPerStack = ConfigOptions.ConfigurableValue.CreateFloat(
             ExtraChallengeShrinesPlugin.PluginGUID,
             ExtraChallengeShrinesPlugin.PluginName,

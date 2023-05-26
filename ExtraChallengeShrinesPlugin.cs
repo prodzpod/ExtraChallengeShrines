@@ -157,12 +157,17 @@ namespace ExtraChallengeShrines
                 if (!tpComponent) return;
                 if (self.bossDirector)
                 {
-                    if (tpComponent.crownShrineStacks > 1)
-                        self.bossDirector.monsterCredit += (float)((int)(Interactables.ShrineCrown.bossCreditsPerStack * Mathf.Pow(Run.instance.compensatedDifficultyCoefficient, 0.5f) * (float)(tpComponent.crownShrineStacks - 1)));
-                    if (tpComponent.rockShrineStacks > 1)
-                        self.bossDirector.monsterCredit += (float)((int)(Interactables.ShrineRock.bossCreditsPerStack * Mathf.Pow(Run.instance.compensatedDifficultyCoefficient, 0.5f) * (float)(tpComponent.rockShrineStacks - 1)));
-                    if (tpComponent.eyeShrineStacks > 1)
-                        self.bossDirector.monsterCredit += (float)((int)(Interactables.ShrineEye.bossCreditsPerStack * Mathf.Pow(Run.instance.compensatedDifficultyCoefficient, 0.5f) * (float)(tpComponent.eyeShrineStacks - 1)));
+                    void TryAddCredits(int stackCount, float onFirstStack, float onExtraStacks)
+                    {
+                        if (stackCount > 0)
+                        {
+                            var creditsToAdd = onFirstStack + onExtraStacks * (stackCount - 1);
+                            self.bossDirector.monsterCredit += (int)(creditsToAdd * Mathf.Pow(Run.instance.compensatedDifficultyCoefficient, 0.5f));
+                        }
+                    }
+                    TryAddCredits(tpComponent.crownShrineStacks, Interactables.ShrineCrown.bossCredits, Interactables.ShrineCrown.bossCreditsPerStack);
+                    TryAddCredits(tpComponent.rockShrineStacks, Interactables.ShrineRock.bossCredits, Interactables.ShrineRock.bossCreditsPerStack);
+                    TryAddCredits(tpComponent.eyeShrineStacks, Interactables.ShrineEye.bossCredits, Interactables.ShrineEye.bossCreditsPerStack);
                 }
             }
         }
