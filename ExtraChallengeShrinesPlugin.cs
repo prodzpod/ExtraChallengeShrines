@@ -29,7 +29,7 @@ namespace ExtraChallengeShrines
     {
         public const string PluginGUID = "com.themysticsword.extrachallengeshrines";
         public const string PluginName = "Extra Challenge Shrines";
-        public const string PluginVersion = "1.0.2";
+        public const string PluginVersion = "1.0.3";
 
         public static System.Reflection.Assembly executingAssembly;
         public static string pluginLocation;

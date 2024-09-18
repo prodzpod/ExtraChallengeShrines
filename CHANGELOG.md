@@ -1,3 +1,5 @@
+## 1.0.3
+* fixes for SotS
 ## 1.0.2:
 * Added new config options for all shrines:
 	* Boss Credits (on first stack)

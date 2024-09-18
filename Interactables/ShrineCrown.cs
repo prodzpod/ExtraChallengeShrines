@@ -118,6 +118,7 @@ namespace ExtraChallengeShrines.Interactables
             spawnCard.orientToFloor = true;
             spawnCard.slightlyRandomizeOrientation = true;
             spawnCard.skipSpawnWhenSacrificeArtifactEnabled = false;
+            MysticsRisky2UtilsPlugin.logger.LogInfo("name: " + Interactables.ShrineCrown.spawnCard);
 
             ConfigOptions.ConfigurableValue.CreateInt(
                 ExtraChallengeShrinesPlugin.PluginGUID,

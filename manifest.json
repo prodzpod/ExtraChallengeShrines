@@ -1,11 +1,11 @@
 {
-  "name": "ExtraChallengeShrines",
-  "version_number": "1.0.2",
-  "website_url": "https://github.com/TheMysticSword/ExtraChallengeShrines",
+  "name": "RealerExtraChallengeShrines",
+  "version_number": "1.0.3",
+  "website_url": "https://github.com/prodzpod/ExtraChallengeShrines",
   "description": "Adds new Shrine of the Mountain-like shrines that affect boss fights and their rewards",
   "dependencies": [
     "bbepis-BepInExPack-5.4.1905",
     "RiskofThunder-HookGenPatcher-1.2.3",
-    "TheMysticSword-MysticsRisky2Utils-2.0.8"
+    "prodzpod-RealerMysticsRisky2Utils-2.0.16"
   ]
 }
