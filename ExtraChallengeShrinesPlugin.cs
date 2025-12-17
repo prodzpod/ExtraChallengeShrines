@@ -29,7 +29,7 @@ namespace ExtraChallengeShrines
     {
         public const string PluginGUID = "com.themysticsword.extrachallengeshrines";
         public const string PluginName = "Extra Challenge Shrines";
-        public const string PluginVersion = "1.0.3";
+        public const string PluginVersion = "1.0.4";
 
         public static System.Reflection.Assembly executingAssembly;
         public static string pluginLocation;
@@ -102,7 +102,7 @@ namespace ExtraChallengeShrines
 
             RoR2Application.onLoad += () =>
             {
-                ExtraChallengeShrinesTeleporterComponent.rockShrineDropTable = Addressables.LoadAssetAsync<PickupDropTable>("RoR2/Base/Common/dtTier1Item.asset").WaitForCompletion();
+                ExtraChallengeShrinesTeleporterComponent.rockShrineDropTable = Addressables.LoadAssetAsync<BasicPickupDropTable>("RoR2/Base/Common/dtTier1Item.asset").WaitForCompletion();
             };
         }
 
@@ -133,20 +133,18 @@ namespace ExtraChallengeShrines
 
             GameObject MakeNewIndicator(Material material)
             {
-                var newIndicator = Instantiate(self.bossShrineIndicator, self.bossShrineIndicator.transform.parent);
+                var newIndicator = Instantiate(self._bossShrineCounter.indicatorPrefab, self._bossShrineCounter.transform.parent);
                 newIndicator.GetComponentInChildren<Renderer>().material = material;
                 newIndicator.SetActive(false);
                 return newIndicator;
             }
 
             tpComponent.crownShrineIndicator = MakeNewIndicator(ExtraChallengeShrinesTeleporterComponent.crownShrineIndicatorMaterial);
-            tpComponent.crownShrineIndicator.transform.position += 4f * Vector3.up;
-
+            tpComponent.crownShrineIndicator.transform.position -= .65f * Vector3.up;
             tpComponent.rockShrineIndicator = MakeNewIndicator(ExtraChallengeShrinesTeleporterComponent.rockShrineIndicatorMaterial);
-            tpComponent.rockShrineIndicator.transform.position -= 2f * Vector3.up;
-
+            tpComponent.rockShrineIndicator.transform.position -= .65f * Vector3.up;
             tpComponent.eyeShrineIndicator = MakeNewIndicator(ExtraChallengeShrinesTeleporterComponent.eyeShrineIndicatorMaterial);
-            tpComponent.eyeShrineIndicator.transform.position += 2f * Vector3.up;
+            tpComponent.eyeShrineIndicator.transform.position -= .65f * Vector3.up;
         }
 
         private void TeleporterInteraction_onTeleporterBeginChargingGlobal(TeleporterInteraction self)
@@ -172,7 +170,7 @@ namespace ExtraChallengeShrines
             }
         }
 
-        private void IdleState_OnInteractionBegin(On.RoR2.TeleporterInteraction.IdleState.orig_OnInteractionBegin orig, EntityStates.BaseState self, Interactor activator)
+        private void IdleState_OnInteractionBegin(On.RoR2.TeleporterInteraction.IdleState.orig_OnInteractionBegin orig, TeleporterInteraction.IdleState self, Interactor activator)
         {
             orig(self, activator);
             var tpComponent = ((TeleporterInteraction.IdleState)self).teleporterInteraction.GetComponent<ExtraChallengeShrinesTeleporterComponent>();

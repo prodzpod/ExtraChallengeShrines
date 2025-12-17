@@ -171,7 +171,7 @@ namespace ExtraChallengeShrines.Interactables
                 ExtraChallengeShrinesPlugin.config,
                 "Shrine of the Sky",
                 "Stages",
-                "goolake,shipgraveyard",
+                "goolake,shipgraveyard,lakesnight,ironalluvium,ironalluvium2,repurposedcrater,helminthroost",
                 restartRequired: true
             );
             foreach (var stageName in stageNames.Value.Split(','))
@@ -183,7 +183,7 @@ namespace ExtraChallengeShrines.Interactables
                 ExtraChallengeShrinesPlugin.config,
                 "Shrine of the Sky",
                 "Stages (Rare)",
-                "blackbeach,golemplains,skymeadow,wispgraveyard,ancientloft",
+                "blackbeach,blackbeach2,golemplains,golemplains2,skymeadow,wispgraveyard,ancientloft,lakes,slumberingsatellite",
                 restartRequired: true
             );
             foreach (var stageName in stageNames.Value.Split(','))

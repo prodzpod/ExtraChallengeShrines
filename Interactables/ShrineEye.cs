@@ -192,7 +192,7 @@ namespace ExtraChallengeShrines.Interactables
                 ExtraChallengeShrinesPlugin.config,
                 "Shrine of the Wind",
                 "Stages",
-                "frozenwall,wispgraveyard,rootjungle",
+                "frozenwall,wispgraveyard,rootjungle,lakesnight,villagenight,nest,repurposedcrater,slumberingsatellite,FBLScene",
                 restartRequired: true
             );
             foreach (var stageName in stageNames.Value.Split(','))
@@ -204,7 +204,7 @@ namespace ExtraChallengeShrines.Interactables
                 ExtraChallengeShrinesPlugin.config,
                 "Shrine of the Wind",
                 "Stages (Rare)",
-                "shipgraveyard,skymeadow,snowyforest",
+                "shipgraveyard,skymeadow,snowyforest,lakes,village,helminthroost,drybasin",
                 restartRequired: true
             );
             foreach (var stageName in stageNames.Value.Split(','))

@@ -1,3 +1,6 @@
+## 1.0.4
+* fixes for AC
+* added default spawns for SOTS, AC, FBL and FR stages
 ## 1.0.3
 * fixes for SotS
 ## 1.0.2:

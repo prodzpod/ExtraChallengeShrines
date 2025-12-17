@@ -170,7 +170,7 @@ namespace ExtraChallengeShrines.Interactables
                 ExtraChallengeShrinesPlugin.config,
                 "Shrine of the Earth",
                 "Stages",
-                "dampcavesimple,wispgraveyard",
+                "dampcavesimple,wispgraveyard,villagenight,ironalluvium,ironalluvium2,FBLScene",
                 restartRequired: true
             );
             foreach (var stageName in stageNames.Value.Split(','))
@@ -182,7 +182,7 @@ namespace ExtraChallengeShrines.Interactables
                 ExtraChallengeShrinesPlugin.config,
                 "Shrine of the Earth",
                 "Stages (Rare)",
-                "blackbeach,foggyswamp,golemplains,rootjungle,shipgraveyard,skymeadow,ancientloft,snowyforest",
+                "blackbeach,blackbeach2,foggyswamp,golemplains,golemplains2,rootjungle,shipgraveyard,skymeadow,ancientloft,snowyforest,village,slumberingsatellite,helminthroost,drybasin",
                 restartRequired: true
             );
             foreach (var stageName in stageNames.Value.Split(','))
